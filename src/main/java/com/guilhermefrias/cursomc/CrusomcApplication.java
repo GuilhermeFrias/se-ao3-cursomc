@@ -101,7 +101,7 @@ public class CrusomcApplication implements CommandLineRunner
 		enderecoRepository.saveAll(Arrays.asList(e1,e2));
 		
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd//MM//yyyy HH:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
 		Pedido ped1 = new Pedido(null, sdf.parse("15/04/2021 10:31"),cli1, e1) ;
 		Pedido ped2 = new Pedido(null, sdf.parse("16/04/2021 18:30"),cli1, e2 );
