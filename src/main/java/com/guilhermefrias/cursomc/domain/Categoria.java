@@ -17,17 +17,17 @@ public class Categoria implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String nomeString;
+	private String nome;
 	
 	@ManyToMany(mappedBy="categorias")
 	private List<Produto> produtos = new ArrayList<>();
 	
 	public Categoria() {}
 
-	public Categoria(Integer id, String nomeString) {
+	public Categoria(Integer id, String nome) {
 		super();
 		this.id = id;
-		this.nomeString = nomeString;
+		this.nome = nome;
 	}
 
 	public Integer getId() {
@@ -39,11 +39,11 @@ public class Categoria implements Serializable{
 	}
 
 	public String getNomeString() {
-		return nomeString;
+		return nome;
 	}
 
-	public void setNomeString(String nomeString) {
-		this.nomeString = nomeString;
+	public void setNomeString(String nome) {
+		this.nome = nome;
 	}
 
 	@Override
