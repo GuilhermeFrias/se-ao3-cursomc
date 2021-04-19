@@ -3,6 +3,7 @@ package com.guilhermefrias.cursomc.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +19,7 @@ import com.guilhermefrias.cursomc.services.exceptions.ObjectNotFoundException;
 @Service
 public class CategoriaService {
 	
+	@Autowired
 	private CategoriaRepository repo;
 	
 	public Categoria buscar(Integer id) {     
